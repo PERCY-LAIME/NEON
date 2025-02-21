@@ -23,7 +23,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Logearnos en GHCR
-        run: echo "${{ secrets.TOKEN1 }}" | docker login ghcr.io -u PERCY-LAIME --password-stdin
+        run: echo "${{ secrets.TOKEN }}" | docker login ghcr.io -u PERCY-LAIME --password-stdin
       - name: Crear imagen
         run: docker build . -t ghcr.io/PERCY-LAIME/express-image:latest
       - name: Desplegar imagen
